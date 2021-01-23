@@ -11,7 +11,7 @@ export class CommentService {
   URL = 'https://jsonplaceholder.typicode.com/comments'
   constructor(private http : HttpClient) {
   }
-  getAllUsers() : Observable<IComment[]> {
+  getComments() : Observable<IComment[]> {
     return this.http.get<IComment[]>(`${this.URL}`)
   }
 }

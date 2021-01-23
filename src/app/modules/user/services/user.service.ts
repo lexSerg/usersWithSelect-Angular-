@@ -13,6 +13,8 @@ export class UserService {
     return this.http.get<IUser[]>(`${this.URL}`)
   }
   getSingleUser(id) : Observable<IUser> {
-    return this.http.get<IUser>(`${URL}/${id}`)
+   return this.http.get<IUser>(`${this.URL}/${id}`)
+    
+    
   }
 }

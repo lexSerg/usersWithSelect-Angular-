@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { PostRoutingModule } from './post-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { FullPostComponent } from './components/full-post/full-post.component';
 
 
 @NgModule({
-  declarations: [AllPostsComponent],
+  declarations: [AllPostsComponent, FullPostComponent],
   imports: [
     CommonModule,
     PostRoutingModule, 

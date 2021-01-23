@@ -1,0 +1,21 @@
+.post-wrap{
+    margin: 1rem;
+    background-color:#80ac9d;
+    border: 1px solid black; 
+    padding: 1rem;
+}
+.post-content{
+    display: flex;
+    font-weight: 600;
+}
+.col1{
+    border: 1px solid black;
+    width: 10%;
+    padding: 1rem;
+}
+.col2{
+    margin-left: 1rem;
+    border: 1px solid black;
+    width: 90%;
+    padding: 1rem;
+}

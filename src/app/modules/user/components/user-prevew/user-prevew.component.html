@@ -23,10 +23,14 @@
                 <p>{{user.id}}</p>      
                 <p>{{user.name}} </p>
                 <p>{{user.username}}</p>   
-                <button type="button" class="btn btn-primary btn-lg user-posts-btn">Show user posts
+                <button type="button" 
+                class="btn btn-primary btn-lg user-posts-btn"
+                (click)='showPosts()'>Show user posts
+
                     <svg class="arrow-down">
                         <use xlink:href='#arrow-down'></use>
                     </svg>
+                    
                 </button>
             </div>
         </div>

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IPost } from 'src/app/modules/post/interfaces';
+import { PostService } from 'src/app/modules/post/services';
 import { IUser } from '../../interfaces';
 
 @Component({
@@ -9,9 +11,13 @@ import { IUser } from '../../interfaces';
 export class UserPrevewComponent implements OnInit {
   @Input()
   user : IUser;
-  constructor() { }
+  posts : IPost[] = []
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
   }
-
+  showPosts(){
+  }
 }

@@ -13,5 +13,8 @@ export class PostService {
   getPosts() : Observable<IPost[]> {
     return this.http.get<IPost[]>(`${this.URL}`)
   }
+  getPostById(id): Observable<Comment> {
+    return this.http.get<Comment>(`${this.URL}.${id}`);
+  }
 }
 
