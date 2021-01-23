@@ -1,0 +1,16 @@
+
+<div class="select-wrap">
+    <div class="input-group mb-3">
+        <select class="custom-select" id="user-select" (click)='selectUser($event)'>
+            <option value="All" selected>All users</option>
+            <option *ngFor='let iterSelect of usersList' value="iterSelect.name">{{iterSelect.id}}) {{iterSelect.name}}</option>
+        </select>
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="user-select">Users</label>
+        </div>
+    </div>
+</div>
+
+
+<app-user-prevew [user]='iter' *ngFor='let iter of usersShowList'></app-user-prevew>
+

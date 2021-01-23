@@ -1,0 +1,24 @@
+.header-nav{
+    background-color: rgb(13, 6, 20);
+    padding: 1rem;
+}
+.nav-item{
+    margin: 2px;
+}
+.nav-item:hover{
+    background-color:cornsilk;
+    outline: 1px solid black;
+    outline-offset: 1px;
+}
+a.nav-link{
+    color : cornsilk;
+}
+a.nav-link:hover{
+    color : black;
+}
+.active-item{
+    background-color:rgba(230, 255, 220, 0.637);
+    outline: 1px solid black;
+    outline-offset: 1px;
+    color: black;
+}

@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "usersWithSelect"
+  "defaultProject": "usersWithSelect",
+  "cli": {
+    "analytics": false
+  }
 }
