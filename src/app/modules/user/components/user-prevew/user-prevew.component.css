@@ -38,7 +38,8 @@
     width: 25%;
 }
 .btn{
-    margin-right: .5rem;
+    margin-right: 1rem;
+    width: 11rem;
 }
 .user-posts-btn{
     font-size: .7rem;
@@ -48,12 +49,12 @@
 .user-posts-btn:hover{
     background-color:rgb(209, 31, 31)
 }
-.arrow-down{
+.user-posts{
+    margin: 1rem;
+}
+.arrow{
     width: 2rem;
     height: 1rem;
     fill: white;
-}
-.user-posts{
-    margin: 1rem;
 }
 

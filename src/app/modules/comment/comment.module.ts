@@ -13,6 +13,7 @@ import { FullCommentComponent } from './components/full-comment/full-comment.com
     CommonModule,
     CommentRoutingModule,
     HttpClientModule
-  ]
+  ],
+  exports: [FullCommentComponent]
 })
 export class CommentModule { }

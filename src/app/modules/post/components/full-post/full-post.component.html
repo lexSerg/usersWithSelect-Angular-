@@ -9,6 +9,24 @@
             <p>{{post?.id}} </p>
             <p>{{post?.userId}} </p>
             <p>{{post?.title}} </p>
+            <button type="button" 
+            class="btn btn-primary btn-lg user-posts-btn"
+            (click)='showComments()'>{{btnTitle}}
+
+                <svg *ngIf='commentToggle; else elseArrow' class="arrow">
+                    <use xlink:href='#arrow-up'></use>
+                </svg>
+                <ng-template #elseArrow>                    
+                    <svg class="arrow">
+                        <use xlink:href='#arrow-down'></use>
+                     </svg>
+                </ng-template>
+
+            </button>
         </div>
     </div>
+    <div class="d" *ngIf='commentToggle'>  
+        <app-full-comment  [comment]='iter' *ngFor='let iter of postComments'></app-full-comment>
+    </div>  
 </div>
+

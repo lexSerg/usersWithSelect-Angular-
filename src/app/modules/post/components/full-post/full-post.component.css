@@ -19,3 +19,27 @@
     width: 90%;
     padding: 1rem;
 }
+.arrow{
+    width: 2rem;
+    height: 1rem;
+    fill: white;
+}
+.user-btn{
+    margin: .7rem;
+    padding: .3rem;
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+.btn{
+    margin-right: 1rem;
+    width: 11rem;
+}
+.user-posts-btn{
+    font-size: .7rem;
+    padding-right: .5rem;
+    background-color:rgb(122, 13, 13)
+}
+.user-posts-btn:hover{
+    background-color:rgb(209, 31, 31)
+}

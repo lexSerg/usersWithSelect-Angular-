@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IUser } from '../../interfaces';
 
 @Component({
   selector: 'app-full-user',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./full-user.component.css']
 })
 export class FullUserComponent implements OnInit {
-
-  constructor() { }
+  user : IUser;
+  constructor(private router: Router) { 
+    this.user = this.router.getCurrentNavigation().extras.state.user;
+  }
 
   ngOnInit(): void {
   }

@@ -8,10 +8,11 @@ import { IComment } from '../../interfaces/comment.interface';
 })
 export class FullCommentComponent implements OnInit {
   @Input()
-  comment: IComment
+  comment: IComment;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.comment);
   }
 
 }

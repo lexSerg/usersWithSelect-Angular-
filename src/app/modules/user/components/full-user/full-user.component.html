@@ -1,1 +1,16 @@
-<h1>Full User</h1>
+
+<div class="full-user">
+    <h1>Full User</h1>
+    <div class="user-content">
+        <p>id: {{user.id}}</p>      
+        <p>name: {{user.name}} </p>
+        <p>username: {{user.username}}</p> 
+        <p>email: {{user.email}} </p> 
+        <p>phone: {{user.phone}}</p> 
+        <p>website: {{user.website}}</p>
+        <p>Adress</p>  
+        <p>street: {{user.address.street}}, suite: {{user.address.suite}}, city: {{user.address.city}} </p>  
+        <p>Company</p>
+        <p>Company name: {{user.company.name}}, catchPhrase: {{user.company.catchPhrase}}, bs: {{user.company.bs}} </p> 
+    </div>
+</div>

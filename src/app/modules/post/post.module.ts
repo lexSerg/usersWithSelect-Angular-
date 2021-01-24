@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PostRoutingModule } from './post-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
 import { FullPostComponent } from './components/full-post/full-post.component';
+import { CommentModule } from '../comment/comment.module';
 
 
 @NgModule({
@@ -12,10 +12,11 @@ import { FullPostComponent } from './components/full-post/full-post.component';
   imports: [
     CommonModule,
     PostRoutingModule, 
-    HttpClientModule
+    HttpClientModule,
+    CommentModule
   ],
   exports: [
-    FullPostComponent
+    FullPostComponent,
   ]
 })
 export class PostModule { }
