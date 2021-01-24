@@ -13,6 +13,9 @@ import { FullPostComponent } from './components/full-post/full-post.component';
     CommonModule,
     PostRoutingModule, 
     HttpClientModule
+  ],
+  exports: [
+    FullPostComponent
   ]
 })
 export class PostModule { }

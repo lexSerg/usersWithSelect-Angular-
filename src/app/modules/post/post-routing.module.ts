@@ -4,8 +4,9 @@ import { AllPostsComponent } from './components/all-posts/all-posts.component';
 import { PostResolveService } from './services';
 
 const routes: Routes = [
-  {path: '', component: AllPostsComponent, resolve: {posts : PostResolveService}}
+  { path: '', component: AllPostsComponent, resolve: {posts : PostResolveService}}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

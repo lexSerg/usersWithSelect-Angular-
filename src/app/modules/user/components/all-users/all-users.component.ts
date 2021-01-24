@@ -15,7 +15,8 @@ export class AllUsersComponent implements OnInit {
     this.activatedRoute.data.subscribe(value => this.usersList = value.users)
     this.usersShowList = this.usersList;
     //Write data to share subjectService
-    //Это дает нам глобальные переменные, к которым мы можем обращаться из разныъ компонент
+    //Это дает нам глобальные переменные, к которым мы можем обращаться из разныx компонент, записываем в них данные 
+    // JASON Placeholder
     this.subjectService.setUserDataList(this.usersList);
     this.activatedRoute.data.subscribe(value=> this.subjectService.setPostDataList(value.posts));
     this.activatedRoute.data.subscribe(value=> this.subjectService.setCommentDataList(value.comments));
@@ -23,13 +24,13 @@ export class AllUsersComponent implements OnInit {
   ngOnInit(): void {
   }
   selectUser(event):void{
-    let usedId = event.target.index;
-    if (typeof usedId === 'undefined') return;
-    if (usedId === 0) {
+    let userId = event.target.index;
+    if (typeof userId === 'undefined') return;
+    if (userId === 0) {
       this.usersShowList = this.usersList;
       return
     };
-    this.usersShowList = this.usersList.filter(value => value.id === usedId);
+    this.usersShowList = this.usersList.filter(value => value.id === userId);
   }
 
 }

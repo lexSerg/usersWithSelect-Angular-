@@ -4,7 +4,7 @@ import { AllCommentsComponent } from './components/all-comments/all-comments.com
 import { CommentResolveService } from './services/comment-resolve.service';
 
 const routes: Routes = [
-  {path: '', component: AllCommentsComponent, resolve: {comments : CommentResolveService}}
+  { path: '', component: AllCommentsComponent, resolve: {comments : CommentResolveService}}
 ];
 
 @NgModule({

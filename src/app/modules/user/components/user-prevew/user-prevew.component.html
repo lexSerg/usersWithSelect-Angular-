@@ -8,9 +8,8 @@
                 c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
         </g>
     </symbol>
-</svg>    
+</svg>  
 <!-- SVG -->
-
 <div class="user-prevew">
     <div class="user-content">
         <div class="user-col1">
@@ -25,18 +24,21 @@
                 <p>{{user.username}}</p>   
                 <button type="button" 
                 class="btn btn-primary btn-lg user-posts-btn"
-                (click)='showPosts()'>Show user posts
+                (click)='showPosts()'>{{btnTitle}}
 
                     <svg class="arrow-down">
                         <use xlink:href='#arrow-down'></use>
                     </svg>
-                    
                 </button>
             </div>
         </div>
     </div>
+    <div class="user-posts" *ngIf='postToggle'>  
+        <app-full-post  [post]='iter' *ngFor='let iter of userPosts'></app-full-post>
+    </div>
     <div class="user-btn">
-        <button type="button" class="btn btn-primary btn-lg">User details</button>
+        <button type="button" class="btn btn-primary btn-lg" (click)='goToUserDetails(user.id)'>User details</button>
     </div>
 </div>
 
+<router-outlet></router-outlet>
