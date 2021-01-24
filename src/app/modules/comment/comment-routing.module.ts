@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PostResolveService } from '../post/services';
 import { AllCommentsComponent } from './components/all-comments/all-comments.component';
 import { CommentResolveService } from './services/comment-resolve.service';
 

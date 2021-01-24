@@ -1,0 +1,10 @@
+.full-user{
+    margin: 1rem;
+}
+.full-user h2{
+    text-align: center;
+}
+.full-user h2 span{
+    font-size: 2.5rem;
+    color: blueviolet;
+}
