@@ -4,6 +4,7 @@ import { CommentRoutingModule } from './comment-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AllCommentsComponent } from './components/all-comments/all-comments.component';
 import { FullCommentComponent } from './components/full-comment/full-comment.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { FullCommentComponent } from './components/full-comment/full-comment.com
   imports: [
     CommonModule,
     CommentRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [FullCommentComponent]
 })

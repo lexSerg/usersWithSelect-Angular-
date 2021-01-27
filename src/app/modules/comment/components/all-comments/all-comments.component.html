@@ -1,1 +1,63 @@
-<app-full-comment [comment]='iter' *ngFor='let iter of comments'></app-full-comment>
+<div class="container">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">Choise action</label>
+          <button type="button"
+                  class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split "
+                  (click)='actionChoise(dropdown, arrow)'><span #arrow class="dropdown-arrow-down"></span>  
+          </button>
+          <div class="dropdown-wrap" #dropdown>
+            <a class="dropdown-item" (click)='setIsShow($event)'>{{actionList[0].title}}</a>
+            <a class="dropdown-item" (click)='setIsShow($event)'>{{actionList[1].title}}</a>
+            <a class="dropdown-item" (click)='setIsShow($event)'>{{actionList[2].title}}</a>
+          </div>
+        </div>
+        <div class="input-group-append" *ngIf='actionList[1].isShow' (input)='isValidInpt(commentIdInput)'>
+            <input 
+              name="inputCommentId" 
+              [(ngModel)]="inputCommentId" 
+              type="number" class="form-control" 
+              placeholder="Input comment id" 
+              #commentIdInput='ngModel'
+              required>
+            <button 
+              class="btn btn-outline-secondary" 
+              type="button" 
+              (click)='ShowSingleComment(inputCommentId)'
+              [disabled]='isValidInpt(commentIdInput)'>
+              Show comment
+            </button>
+        </div>
+        <div class="input-group-append" *ngIf='actionList[2].isShow'(input)='isValidInpt(postIdInput)'>
+            <input 
+                [(ngModel)]='inputPostId' 
+                #postIdInput='ngModel'
+                type="number" 
+                class="form-control"  
+                placeholder="Input post id" 
+                required>
+            <button
+              class="btn btn-outline-secondary" 
+              type="button"
+              #postIdBtn
+              (click)='ShowComments(inputPostId)'
+              [disabled]='isValidInpt(postIdInput)'
+              >
+            Show comments
+          </button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="comments-wrap" *ngIf='commentsShowList[0].isShow'>
+  <app-full-comment  [comment]='iter'  *ngFor='let iter of commentsShowList[0].comments'></app-full-comment>
+</div>
+<div class="comments-wrap" *ngIf='commentsShowList[1].isShow'>
+  <app-full-comment  [comment]='iter'  *ngFor='let iter of commentsShowList[1].comments'></app-full-comment>
+</div>
+<div class="comments-wrap" *ngIf='commentsShowList[2].isShow'>
+  <app-full-comment  [comment]='iter'  *ngFor='let iter of commentsShowList[2].comments'></app-full-comment>
+</div>
+
