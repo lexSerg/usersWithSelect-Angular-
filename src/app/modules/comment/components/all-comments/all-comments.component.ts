@@ -31,7 +31,7 @@ export class AllCommentsComponent implements OnInit {
       isShow : false
     },
     {
-      title : 'Search comments by PostID',
+      title : 'Search comments by Post ID',
       isShow : false
     }
   ];
@@ -78,13 +78,13 @@ export class AllCommentsComponent implements OnInit {
     this.actionChoise(this.dropdownElem, this.arrowElem);
   };
   ShowSingleComment(id : number):void {
-    if (!this.isIdValid(id)) return;
+    if (!this.isIdValidCommentById(id)) return;
     this.inputCommentId = id;
     this.commentsShowList[1].comments = this.comments.filter(value => value.id === this.inputCommentId);
     this.choiseCommentsShowList(this.commentsShowList[1].comments)
   };
   ShowComments(id : number):void{
-    if (!this.isIdValid(id)) return;
+    if (!this.isIdValidCommentsByPostId(id)) return;
     this.inputPostId = id;
     this.commentsShowList[2].comments = this.comments.filter(value => value.postId === this.inputPostId);
     this.choiseCommentsShowList(this.commentsShowList[2].comments);
@@ -95,9 +95,16 @@ export class AllCommentsComponent implements OnInit {
   }
 
   //********** auxiliary methods *****************
-  isIdValid(id):boolean{
+  isIdValidCommentById(id):boolean{
     if (id > this.comments.length || id < 1) {
-      alert(`Commets with id : ${id} not exist`)
+      alert(`Commet with Id : ${id} not exist`)
+      return false
+    };
+    return true
+  }
+  isIdValidCommentsByPostId(id):boolean{
+    if (id > this.comments[this.comments.length - 1].postId || id < 1) {
+      alert(`Commets with Post Id : ${id} not exist`)
       return false
     };
     return true
